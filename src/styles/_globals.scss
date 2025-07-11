@@ -1,0 +1,45 @@
+@use 'helpers' as *;
+
+main {
+	flex-grow: 1;
+}
+
+a,
+button,
+label,
+textarea,
+input,
+select,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+a {
+	&[class] {
+		text-decoration: none;
+	}
+}
+
+:focus-visible {
+	outline: 2px dashed var(--color-dark);
+	outline-offset: 4px;
+	transition-duration: 0 !important;
+}
+
+a,
+button {
+	&[aria-label] {
+		position: relative;
+
+		&::before {
+			content: '';
+			@include abs-center;
+			@include square(rem(44));
+		}
+	}
+}
+
+button:focus-visible,
+a:focus-visible {
+	// кто добавит тот красавчик а мне сейчас лень
+}

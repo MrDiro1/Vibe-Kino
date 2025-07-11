@@ -1,0 +1,11 @@
+@use 'helpers' as *;
+
+:root {
+	--color-dark: #1a1a1a;
+	--color-light: #fff;
+
+	-transition-duration: 0.2s;
+
+	--container-width: 1600px;
+	--container-padding-x: 16px;
+}
