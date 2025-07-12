@@ -9,31 +9,34 @@
 	<body>
 		<header class="header">
 			<div class="header__inner container-small">
-				<a href="/" class="header__logo">
-					<img
-						src="./src/assets/icons/logo.svg"
-						alt=""
-						class="header__logo-image"
-						width="100"
-						height="50"
-					/>
-				</a>
-				<nav class="header__menu">
-					<ul class="header__menu-list">
-						<li class="header__menu-item">
-							<a href="" class="header__menu-link">Фільми</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="" class="header__menu-link">Мультфільми</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="" class="header__menu-link">Серіали</a>
-						</li>
-						<li class="header__menu-item">
-							<a href="" class="header__menu-link">Шоу</a>
-						</li>
-					</ul>
-				</nav>
+				<div class="header__content">
+					<a href="/" class="header__logo">
+						<img
+							src="./src/assets/icons/logo.svg"
+							alt=""
+							class="header__logo-image"
+							width="100"
+							height="50"
+						/>
+					</a>
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Фільми</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Мультфільми</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Серіали</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Шоу</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
 				<div class="header__accent">
 					<button class="header_button button" type="button">Тарифи</button>
 					<form
@@ -56,25 +59,27 @@
 								height="19"
 							/>
 						</button>
-						<label for="search-input" class="visually-hidden">Пошук</label>
-						<input
-							type="search"
-							id="search-input"
-							name="search-input"
-							class="search__input"
-							placeholder="Пошук"
-						/>
-						<button type="submit" class="search__submit">Найти</button>
+						<div class="search__accent-wrapper">
+							<label for="search-input" class="visually-hidden">Пошук</label>
+							<input
+								type="search"
+								id="search-input"
+								name="search-input"
+								class="search__input"
+								placeholder="Пошук"
+							/>
+							<button type="submit" class="search__submit">Найти</button>
+						</div>
 					</form>
+					<button
+						type="button"
+						class="header__open-modal-button"
+						aria-haspopup="dialog"
+						aria-controls="auth-modal"
+					>
+						Увійти
+					</button>
 				</div>
-				<button
-					type="button"
-					class="header__open-modal-button"
-					aria-haspopup="dialog"
-					aria-controls="auth-modal"
-				>
-					Увійти
-				</button>
 			</div>
 		</header>
 		<main class="main"></main>

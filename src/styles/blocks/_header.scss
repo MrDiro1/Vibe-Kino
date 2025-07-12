@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.header {
+	background-color: var(--color-dark);
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+	}
+
+	&__menu-list {
+		display: flex;
+	}
+
+	&__menu-link {
+		padding: 17px 10px 16px;
+		text-transform: uppercase;
+		font-size: fluid(16, 14);
+		transition-duration: var(--transition-duration);
+		border-radius: var(--border-radius-medium);
+
+		@include hover {
+			color: var(--color-orange);
+			background-color: var(--color-light);
+		}
+	}
+
+	&__accent {
+		display: flex;
+		column-gap: rem(20);
+	}
+
+	&__form {
+		display: flex;
+		column-gap: 5px;
+
+		border-radius: var(--border-radius-medium);
+
+		&:not(:has(.is-active)) {
+			.search__accent-wrapper {
+				@include visually-hidden;
+			}
+		}
+	}
+
+	&__open-modal-button {
+		background-color: transparent;
+		color: var(--color-light);
+		text-transform: uppercase;
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			color: var(--color-orange);
+		}
+	}
+}

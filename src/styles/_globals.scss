@@ -4,6 +4,12 @@ main {
 	flex-grow: 1;
 }
 
+body {
+	font-family: var(--font-family-base);
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
 a,
 button,
 label,
@@ -26,6 +32,15 @@ a {
 	transition-duration: 0 !important;
 }
 
+button,
+input {
+	all: unset;
+}
+
+button {
+	cursor: pointer;
+}
+
 a,
 button {
 	&[aria-label] {
@@ -37,6 +52,10 @@ button {
 			@include square(rem(44));
 		}
 	}
+}
+
+a {
+	color: var(--color-light);
 }
 
 button:focus-visible,

@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.search {
+	&__accent-wrapper {
+		background-color: var(--color-light);
+		border-radius: var(--border-radius-medium);
+	}
+
+	&__input {
+		padding-left: 20px;
+		padding-right: 5px;
+		border: var(--border);
+		transition-duration: var(--transition-duration);
+	}
+
+	&__submit {
+		padding-right: 25px;
+		padding-left: 5px;
+		border-left: 1px solid var(--color-dark);
+
+		@include square(30px);
+	}
+}

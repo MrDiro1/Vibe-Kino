@@ -7,7 +7,9 @@
 }
 
 .container-small {
-	max-width: calc(var(--container-width-small) + var(--container-padding-x) * 2);
+	max-width: calc(
+		var(--container-width-small) + var(--container-padding-x) * 2
+	);
 	margin-inline: auto;
 	padding-inline: var(--container-padding-x);
 }
@@ -49,5 +51,19 @@
 .visible-desktop-s {
 	@include desktop-s-above {
 		display: none !important;
+	}
+}
+
+.button {
+	background-color: transparent;
+	border: 1px solid var(--color-light);
+	color: var(--color-light);
+	padding-inline: 15px;
+	transition-duration: var(--transition-duration);
+	border-radius: var(--border-radius-small);
+
+	@include hover {
+		border-color: var(--color-orange);
+		color: var(--color-orange);
 	}
 }
