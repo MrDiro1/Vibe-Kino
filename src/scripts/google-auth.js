@@ -8,7 +8,7 @@ export function initGoogleAuth(clientId) {
 		const triggerBtn = document.getElementById('google-signin-trigger')
 		if (triggerBtn) {
 			triggerBtn.addEventListener('click', () => {
-				google.accounts.id.prompt() // Покажет окно входа
+				google.accounts.id.prompt()
 			})
 		}
 	})
