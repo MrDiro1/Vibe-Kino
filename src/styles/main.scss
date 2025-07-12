@@ -6,3 +6,7 @@
 
 @use 'blocks/header';
 @use 'blocks/search';
+@use 'blocks/auth-modal';
+@use 'blocks/auth-form';
+@use 'blocks/auth-options';
+@use 'blocks/modal';
