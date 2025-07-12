@@ -77,6 +77,92 @@
 				</button>
 			</div>
 		</header>
+		<main class="main"></main>
+		<div
+			class="modal"
+			id="auth-modal"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="auth-modal__title"
+			hidden
+		>
+			<div class="modal__content" role="document">
+				<div class="modal__inner auth-modal">
+					<!-- Заголовок и кнопка закрытия -->
+					<div class="auth-modal__header-content">
+						<h2 id="auth-modal__title">Вхід</h2>
+						<button
+							type="button"
+							class="modal__close"
+							aria-label="Закрити модальне вікно"
+						>
+							&times;
+						</button>
+					</div>
+
+					<!-- Основное тело модалки -->
+					<div class="auth__modal-body">
+						<div class="auth__modal-description">
+							<p>Для входу або реєстрації введіть свій номер телефону</p>
+						</div>
+
+						<!-- 🔽 Форма з номером телефону -->
+						<form
+							class="auth__modal-form auth-form"
+							id="phone-login-form"
+							action="#"
+							method="post"
+						>
+							<label for="phone" class="visually-hidden">Номер телефону</label>
+							<input
+								class="auth-form__input"
+								type="tel"
+								id="phone"
+								name="phone"
+								inputmode="tel"
+								autocomplete="tel"
+								placeholder="Телефон"
+								required
+								aria-describedby="phone-help"
+							/>
+							<div id="phone-help" class="visually-hidden">
+								Введіть номер телефону у форматі +380XXXXXXXXX
+							</div>
+
+							<button class="auth-form__button" type="submit">
+								Отримати код
+							</button>
+						</form>
+
+						<!-- 🔽 Альтернативні способи входу -->
+						<div class="auth-options" aria-label="Альтернативні способи входу">
+							<button
+								type="button"
+								class="auth-option google"
+								aria-label="Увійти через Google"
+							>
+								Увійти через Google
+							</button>
+							<button
+								type="button"
+								class="auth-option facebook"
+								aria-label="Увійти через Facebook"
+							>
+								Увійти через Facebook
+							</button>
+							<button
+								type="button"
+								class="auth-option apple"
+								aria-label="Увійти через Apple"
+							>
+								Увійти через Apple
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script type="module" src="./src/scripts/main.js"></script>
 	</body>
 </html>
