@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.auth-modal {
+	display: grid;
+	row-gap: 20px;
+
+	&__header-content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__body {
+		display: grid;
+		row-gap: 20px;
+	}
+}

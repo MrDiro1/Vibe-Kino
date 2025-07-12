@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
 		<title>Vibe-Kino || "Page Name"</title>
 	</head>
 	<body>
@@ -78,6 +79,7 @@
 						class="header__open-modal-button"
 						aria-haspopup="dialog"
 						aria-controls="auth-modal"
+						data-js-open-button
 					>
 						Увійти
 					</button>
@@ -91,31 +93,29 @@
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="auth-modal__title"
-			hidden
+			data-js-modal
 		>
 			<div class="modal__content" role="document">
 				<div class="modal__inner auth-modal">
-					<!-- Заголовок и кнопка закрытия -->
 					<div class="auth-modal__header-content">
 						<h2 id="auth-modal__title">Вхід</h2>
 						<button
 							type="button"
 							class="modal__close"
 							aria-label="Закрити модальне вікно"
+							data-js-modal-close
 						>
 							&times;
 						</button>
 					</div>
 
-					<!-- Основное тело модалки -->
-					<div class="auth__modal-body">
-						<div class="auth__modal-description">
+					<div class="auth-modal__body">
+						<div class="auth-modal__description">
 							<p>Для входу або реєстрації введіть свій номер телефону</p>
 						</div>
 
-						<!-- 🔽 Форма з номером телефону -->
 						<form
-							class="auth__modal-form auth-form"
+							class="auth-modal__form auth-form"
 							id="phone-login-form"
 							action="#"
 							method="post"
@@ -131,6 +131,7 @@
 								placeholder="Телефон"
 								required
 								aria-describedby="phone-help"
+								data-js-input-mask="+380 (000) 000-00-00"
 							/>
 							<div id="phone-help" class="visually-hidden">
 								Введіть номер телефону у форматі +380XXXXXXXXX
@@ -141,29 +142,26 @@
 							</button>
 						</form>
 
-						<!-- 🔽 Альтернативні способи входу -->
 						<div class="auth-options" aria-label="Альтернативні способи входу">
-							<button
-								type="button"
-								class="auth-option google"
-								aria-label="Увійти через Google"
-							>
-								Увійти через Google
-							</button>
-							<button
-								type="button"
-								class="auth-option facebook"
-								aria-label="Увійти через Facebook"
-							>
-								Увійти через Facebook
-							</button>
-							<button
-								type="button"
-								class="auth-option apple"
-								aria-label="Увійти через Apple"
-							>
-								Увійти через Apple
-							</button>
+							<ul class="auth-options__list">
+								<li class="auth-options__item">
+									<img
+										src="./src/assets/icons/Google.svg"
+										alt=""
+										class="auth-options__image"
+										width="24"
+										height="24"
+									/>
+									<button
+										type="button"
+										class="auth-options__link"
+										aria-label="Увійти через Google"
+										id="google-signin-trigger"
+									>
+										Увійти через Google
+									</button>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>

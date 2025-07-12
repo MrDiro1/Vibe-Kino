@@ -13,5 +13,8 @@
 		"postcss-pxtorem": "^6.1.0",
 		"sass": "^1.89.2",
 		"vite": "^7.0.4"
+	},
+	"dependencies": {
+		"imask": "^7.6.1"
 	}
 }

@@ -1,5 +1,11 @@
 @use 'helpers' as *;
 
+html {
+	&.is-lock {
+		overflow: hidden;
+	}
+}
+
 main {
 	flex-grow: 1;
 }
