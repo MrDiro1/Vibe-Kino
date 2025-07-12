@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
 		<title>Vibe-Kino || "Page Name"</title>
 	</head>
 	<body>
@@ -96,7 +97,6 @@
 		>
 			<div class="modal__content" role="document">
 				<div class="modal__inner auth-modal">
-				
 					<div class="auth-modal__header-content">
 						<h2 id="auth-modal__title">Вхід</h2>
 						<button
@@ -109,13 +109,11 @@
 						</button>
 					</div>
 
-					
 					<div class="auth-modal__body">
 						<div class="auth-modal__description">
 							<p>Для входу або реєстрації введіть свій номер телефону</p>
 						</div>
 
-						
 						<form
 							class="auth-modal__form auth-form"
 							id="phone-login-form"
@@ -144,7 +142,6 @@
 							</button>
 						</form>
 
-						<!-- 🔽 Альтернативні способи входу -->
 						<div class="auth-options" aria-label="Альтернативні способи входу">
 							<ul class="auth-options__list">
 								<li class="auth-options__item">
@@ -155,13 +152,14 @@
 										width="24"
 										height="24"
 									/>
-									<a
-										href="/"
+									<button
+										type="button"
 										class="auth-options__link"
 										aria-label="Увійти через Google"
+										id="google-signin-trigger"
 									>
 										Увійти через Google
-									</a>
+									</button>
 								</li>
 							</ul>
 						</div>
