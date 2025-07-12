@@ -78,6 +78,7 @@
 						class="header__open-modal-button"
 						aria-haspopup="dialog"
 						aria-controls="auth-modal"
+						data-js-open-button
 					>
 						Увійти
 					</button>
@@ -86,33 +87,35 @@
 		</header>
 		<main class="main"></main>
 		<div
-			class="modal is-active"
+			class="modal"
 			id="auth-modal"
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="auth-modal__title"
+			data-js-modal
 		>
 			<div class="modal__content" role="document">
 				<div class="modal__inner auth-modal">
-					<!-- Заголовок и кнопка закрытия -->
+				
 					<div class="auth-modal__header-content">
 						<h2 id="auth-modal__title">Вхід</h2>
 						<button
 							type="button"
 							class="modal__close"
 							aria-label="Закрити модальне вікно"
+							data-js-modal-close
 						>
 							&times;
 						</button>
 					</div>
 
-					<!-- Основное тело модалки -->
+					
 					<div class="auth-modal__body">
 						<div class="auth-modal__description">
 							<p>Для входу або реєстрації введіть свій номер телефону</p>
 						</div>
 
-						<!-- 🔽 Форма з номером телефону -->
+						
 						<form
 							class="auth-modal__form auth-form"
 							id="phone-login-form"
