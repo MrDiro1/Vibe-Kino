@@ -15,6 +15,10 @@
 		column-gap: rem(10);
 	}
 
+	&__button {
+		padding-block: 5px;
+	}
+
 	&__menu-list {
 		display: flex;
 	}
