@@ -4,6 +4,24 @@
 	&__accent-wrapper {
 		background-color: var(--color-light);
 		border-radius: var(--border-radius-medium);
+		overflow: hidden;
+		transform-origin: top;
+
+		opacity: 0;
+		transform: scaleY(0.95);
+		visibility: hidden;
+		pointer-events: none;
+
+		transition: opacity var(--transition-duration-accent) ease,
+			transform var(--transition-duration-accent) ease,
+			visibility var(--transition-duration-accent) ease;
+
+		&.is-active {
+			opacity: 1;
+			transform: scaleY(1);
+			visibility: visible;
+			pointer-events: auto;
+		}
 	}
 
 	&__input {
@@ -12,6 +30,7 @@
 		border: var(--border);
 		transition-duration: var(--transition-duration);
 		outline: none;
+		padding-top: 6px;
 	}
 
 	&__submit {
