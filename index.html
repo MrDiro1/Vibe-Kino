@@ -7,7 +7,7 @@
 		<title>Vibe-Kino || "Page Name"</title>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header" data-js-header>
 			<div class="header__inner container-small">
 				<div class="header__content">
 					<a href="/" class="header__logo">
@@ -44,8 +44,10 @@
 						action="/search"
 						role="search"
 						method="get"
+						data-js-header-form
 					>
 						<button
+							data-js-header-button
 							type="button"
 							class="search__button"
 							title="Пошук"
@@ -59,7 +61,7 @@
 								height="19"
 							/>
 						</button>
-						<div class="search__accent-wrapper">
+						<div class="search__accent-wrapper" data-js-header-search>
 							<label for="search-input" class="visually-hidden">Пошук</label>
 							<input
 								type="search"
