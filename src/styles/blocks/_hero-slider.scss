@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.hero-slider__swiper {
+	.swiper-button-prev,
+	.swiper-button-next {
+		color: var(--color-light);
+		width: 70px;
+		height: 130px;
+		transition-duration: var(--transition-duration);
+		border-radius: var(--border-radius-medium);
+
+		@include hover {
+			background-color: var(--color-yellow-accent);
+		}
+	}
+
+	/* 🔵 Пагинация */
+	.swiper-pagination {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		padding-bottom: 10px;
+
+		.swiper-pagination-bullet {
+			@include square(14px);
+			background-color: var(--color-light-accent);
+			opacity: 1;
+			border-radius: 50%;
+			transition-duration: var(--transition-duration);
+
+			@include hover {
+				transform: scale(1.2);
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: var(--color-light); // полностью белая
+		}
+	}
+}
