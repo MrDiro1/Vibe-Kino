@@ -1,6 +1,12 @@
 @use '../helpers' as *;
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+
 	background-color: var(--color-dark);
 
 	&__inner {
