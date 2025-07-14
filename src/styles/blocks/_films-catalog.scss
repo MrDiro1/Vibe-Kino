@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.films-catalog {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__title {
+		font-size: fluid(32, 24);
+		font-weight: 400;
+	}
+
+	&__collection:not(:last-child) {
+		margin-bottom: 60px;
+	}
+}
