@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.films-catalog__swiper {
+	position: relative;
+
+	.swiper-controls {
+		display: flex;
+		justify-content: flex-end;
+		gap: 12px;
+		margin-bottom: 16px;
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			color: var(--color-light);
+			position: static;
+			width: 40px;
+			height: 40px;
+			background-color: var(--color-light-gray);
+			color: var(--color-light);
+			border-radius: var(--border-radius-medium);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			&::after {
+				font-size: 16px;
+			}
+
+			@include hover {
+				background-color: var(--color-dark);
+				color: var(--color-light);
+			}
+		}
+	}
+}
