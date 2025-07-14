@@ -1,5 +1,5 @@
 import Swiper from 'swiper'
-import 'swiper/css' // Базовые стили
+import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
@@ -9,7 +9,9 @@ class SwiperElement {
 	constructor(rootElement) {
 		this.rootElement = rootElement
 
-		this.swiper = new Swiper(this.rootElement, {
+		const sliderType = rootElement.dataset.type || 'default'
+
+		let config = {
 			modules: [Navigation, Pagination, Autoplay],
 			loop: true,
 			spaceBetween: 30,
@@ -29,7 +31,19 @@ class SwiperElement {
 				delay: 3000,
 				disableOnInteraction: true,
 			},
-		})
+		}
+
+		if (sliderType === 'movie-scroll') {
+			config = {
+				...config,
+				loop: false,
+				slidesPerView: 6,
+				slidesPerGroup: 6,
+				autoplay: false,
+			}
+		}
+
+		this.swiper = new Swiper(this.rootElement, config)
 	}
 }
 
