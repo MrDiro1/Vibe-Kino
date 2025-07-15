@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+		<title>Vibe-Kino || Movie</title>
+	</head>
+	<body>
+		<header class="header" data-js-header>
+			<div class="header__inner container-small">
+				<div class="header__content">
+					<a href="/" class="header__logo">
+						<img
+							src="./src/assets/icons/logo.svg"
+							alt=""
+							class="header__logo-image"
+							width="100"
+							height="50"
+						/>
+					</a>
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a href="./index.html" class="header__menu-link">Фільми</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Мультфільми</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Серіали</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="" class="header__menu-link">Шоу</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__accent">
+					<button class="header__button button" type="button">Тарифи</button>
+					<form
+						class="header__form search"
+						action="/search"
+						role="search"
+						method="get"
+						data-js-header-form
+					>
+						<button
+							data-js-header-button
+							type="button"
+							class="search__button"
+							title="Пошук"
+							aria-label="Відкрити поле пошуку"
+						>
+							<img
+								class="search__image"
+								src="./src/assets/icons/search.svg"
+								alt=""
+								width="19"
+								height="19"
+							/>
+						</button>
+						<div class="search__accent-wrapper" data-js-header-search>
+							<label for="search-input" class="visually-hidden">Пошук</label>
+							<input
+								type="search"
+								id="search-input"
+								name="search-input"
+								class="search__input"
+								placeholder="Пошук"
+							/>
+							<button type="submit" class="search__submit">Найти</button>
+						</div>
+					</form>
+					<button
+						type="button"
+						class="header__open-modal-button"
+						aria-haspopup="dialog"
+						aria-controls="auth-modal"
+						data-js-open-button
+					>
+						Увійти
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="movie" data-js-movie>
+				<div class="movie__inner">
+					<div
+						class="movie__player-info player-info container-small"
+						data-js-player-info
+					>
+						<img
+							src=""
+							alt=""
+							class="player-info__image"
+							loading="lazy"
+							width="220"
+							height="311"
+							data-js-small-poster
+						/>
+						<div class="player-info__body">
+							<h1 class="player-info__title" data-js-title></h1>
+							<button
+								class="player-info__button"
+								type="button"
+								data-js-watch-button
+							>
+								Дивитися
+							</button>
+							<div class="player-info__description">
+								<p data-js-description></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="movie__trailer" data-js-youtube-player r>
+						<iframe
+							width="100%"
+							height="1000"
+							frameborder="0"
+							allowfullscreen
+							data-js-youtube-iframe
+						></iframe>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div
+			class="modal"
+			id="auth-modal"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="auth-modal__title"
+			data-js-modal
+		>
+			<div class="modal__content" role="document">
+				<div class="modal__inner auth-modal">
+					<div class="auth-modal__header-content">
+						<h2 id="auth-modal__title">Вхід</h2>
+						<button
+							type="button"
+							class="modal__close"
+							aria-label="Закрити модальне вікно"
+							data-js-modal-close
+						>
+							&times;
+						</button>
+					</div>
+
+					<div class="auth-modal__body">
+						<div class="auth-modal__description">
+							<p>Для входу або реєстрації введіть свій номер телефону</p>
+						</div>
+
+						<form
+							class="auth-modal__form auth-form"
+							id="phone-login-form"
+							action="#"
+							method="post"
+						>
+							<label for="phone" class="visually-hidden">Номер телефону</label>
+							<input
+								class="auth-form__input"
+								type="tel"
+								id="phone"
+								name="phone"
+								inputmode="tel"
+								autocomplete="tel"
+								placeholder="Телефон"
+								required
+								aria-describedby="phone-help"
+								data-js-input-mask="+380 (000) 000-00-00"
+							/>
+							<div id="phone-help" class="visually-hidden">
+								Введіть номер телефону у форматі +380XXXXXXXXX
+							</div>
+
+							<button class="auth-form__button" type="submit">
+								Отримати код
+							</button>
+						</form>
+
+						<div class="auth-options" aria-label="Альтернативні способи входу">
+							<ul class="auth-options__list">
+								<li class="auth-options__item">
+									<img
+										src="./src/assets/icons/Google.svg"
+										alt=""
+										class="auth-options__image"
+										width="24"
+										height="24"
+									/>
+									<button
+										type="button"
+										class="auth-options__link"
+										aria-label="Увійти через Google"
+										id="google-signin-trigger"
+									>
+										Увійти через Google
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="./src/scripts/main.js"></script>
+	</body>
+</html>

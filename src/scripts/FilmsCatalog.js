@@ -57,7 +57,7 @@ export default class MovieSlider {
 		slide.className = 'swiper-slide'
 		slide.innerHTML = `
 			<div class="catalog-films__film-preview-card film-preview-card">
-				<a href="/" class="film-preview-card__link">
+				<a href="./movie.html?id=${movie.id}" class="film-preview-card__link">
 					<img
 						src="${this.imageBaseUrl}${poster_path}"
 						alt="${title}"
