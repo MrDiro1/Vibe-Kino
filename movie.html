@@ -87,29 +87,39 @@
 		</header>
 		<main class="main">
 			<section class="movie">
-				<div class="movie__inner container-small">
-					<div class="movie__player-info player__info">
+				<div class="movie__inner">
+					<div class="movie__player-info player-info container-small">
 						<img
-							src="./src/assets/images/film-prev.webp"
-							alt="Назва Фільму"
+							src=""
+							alt=""
 							class="player-info__image"
 							loading="lazy"
 							width="220"
 							height="311"
 						/>
 						<div class="player-info__body">
-							<h1 class="player-info__title">Назва Фільму</h1>
+							<h1 class="player-info__title"></h1>
 							<button class="player-info__button" type="button">
 								Дивитися
 							</button>
 							<div class="player-info__description">
-								<p>
-									Опис фільму Опис фільму Опис фільму Опис фільму Опис фільму
-									Опис фільму Опис фільму Опис фільму Опис фільму Опис фільму
-									Опис фільму Опис фільмуОпис фільму
-								</p>
+								<p></p>
 							</div>
 						</div>
+					</div>
+
+					<!-- Контейнер для трейлера (изначально скрыт) -->
+					<div
+						class="movie__trailer"
+						style="display: none; padding: 40px 0; text-align: center"
+					>
+						<iframe
+							width="100%"
+							height="500"
+							src=""
+							frameborder="0"
+							allowfullscreen
+						></iframe>
 					</div>
 				</div>
 			</section>
