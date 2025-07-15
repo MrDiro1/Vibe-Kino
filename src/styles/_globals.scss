@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 
 html {
+	scroll-behavior: smooth !important;
 	&.is-lock {
 		overflow: hidden;
 	}

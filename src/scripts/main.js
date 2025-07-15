@@ -5,6 +5,8 @@ import InputMaskCollection from './InputMask.js'
 import { initGoogleAuth } from './google-auth.js'
 import SliderCollection from './Slider.js'
 import MovieSlider from './FilmsCatalog.js'
+import MoviePageCollection from './MoviePage.js'
+import YouTubePlayerCollection from './YoutubePlayer.js'
 
 const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID // Ваш Google Client ID, замените на свой
 
@@ -31,6 +33,9 @@ const upcomingSlider = new MovieSlider({
 	language: 'uk-UA',
 })
 
+const watchButton = document.querySelector('[data-js-watch-button]')
+const youtubePlayer = new YouTubePlayerCollection(watchButton)
+
 new Search()
 new ModalCollection()
 new InputMaskCollection()
@@ -42,3 +47,7 @@ new SliderCollection()
 popularSlider.render()
 topRatedSlider.render()
 upcomingSlider.render()
+
+new MoviePageCollection({
+	onTrailerKey: key => youtubePlayer.setTrailerKey(key),
+})

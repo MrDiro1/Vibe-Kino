@@ -86,9 +86,12 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="movie">
+			<section class="movie" data-js-movie>
 				<div class="movie__inner">
-					<div class="movie__player-info player-info container-small">
+					<div
+						class="movie__player-info player-info container-small"
+						data-js-player-info
+					>
 						<img
 							src=""
 							alt=""
@@ -96,29 +99,30 @@
 							loading="lazy"
 							width="220"
 							height="311"
+							data-js-small-poster
 						/>
 						<div class="player-info__body">
-							<h1 class="player-info__title"></h1>
-							<button class="player-info__button" type="button">
+							<h1 class="player-info__title" data-js-title></h1>
+							<button
+								class="player-info__button"
+								type="button"
+								data-js-watch-button
+							>
 								Дивитися
 							</button>
 							<div class="player-info__description">
-								<p></p>
+								<p data-js-description></p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Контейнер для трейлера (изначально скрыт) -->
-					<div
-						class="movie__trailer"
-						style="display: none; padding: 40px 0; text-align: center"
-					>
+					<div class="movie__trailer" data-js-youtube-player r>
 						<iframe
 							width="100%"
-							height="500"
-							src=""
+							height="1000"
 							frameborder="0"
 							allowfullscreen
+							data-js-youtube-iframe
 						></iframe>
 					</div>
 				</div>
