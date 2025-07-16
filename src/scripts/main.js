@@ -6,8 +6,7 @@ import { initGoogleAuth } from './google-auth.js'
 import SliderCollection from './Slider.js'
 import MovieSlider from './FilmsCatalog.js'
 
-const CLIENT_ID =
-	'338113015991-8lidjllokbu1dkbeq5p166c02lgjc4mf.apps.googleusercontent.com'
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID
 
 const TOKEN = import.meta.env.VITE_TMDB_TOKEN // Ваш токен TMDB, замените на свой
 
