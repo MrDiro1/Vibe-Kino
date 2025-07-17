@@ -44,8 +44,6 @@ new InputMaskCollection()
 
 initGoogleAuth(CLIENT_ID)
 
-new SliderCollection()
-
 popularSlider.render()
 topRatedSlider.render()
 upcomingSlider.render()
@@ -55,3 +53,7 @@ new MoviePageCollection({
 })
 
 new HeroSliderCollection(TOKEN)
+
+setTimeout(() => {
+	new SliderCollection()
+}, 10)
