@@ -4,7 +4,7 @@ class HeroSlider {
 	constructor(rootElement, token) {
 		this.rootElement = rootElement
 		this.token = token
-		this.swiperWrapper = this.rootElement 
+		this.swiperWrapper = this.rootElement
 		this.apiUrl =
 			'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1'
 		this.apiOptions = {
