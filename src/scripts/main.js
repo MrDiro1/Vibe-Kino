@@ -4,13 +4,13 @@ import ModalCollection from './AuthModal.js'
 import InputMaskCollection from './InputMask.js'
 import { initGoogleAuth } from './google-auth.js'
 import SliderCollection from './Slider.js'
+
 import MovieSlider from './FilmsCatalog.js'
 import MoviePageCollection from './MoviePage.js'
 import YouTubePlayerCollection from './YoutubePlayer.js'
 
-const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID // Ваш Google Client ID, замените на свой
-
-const TOKEN = import.meta.env.VITE_TMDB_TOKEN // Ваш токен TMDB, замените на свой
+const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID
+const TOKEN = import.meta.env.VITE_TMDB_TOKEN
 
 const popularSlider = new MovieSlider({
 	wrapperSelector: '[data-js-popular-slider]',
@@ -36,6 +36,8 @@ const upcomingSlider = new MovieSlider({
 const watchButton = document.querySelector('[data-js-watch-button]')
 const youtubePlayer = new YouTubePlayerCollection(watchButton)
 
+import HeroSliderCollection from './HeroSlider.js'
+
 new Search()
 new ModalCollection()
 new InputMaskCollection()
@@ -51,3 +53,5 @@ upcomingSlider.render()
 new MoviePageCollection({
 	onTrailerKey: key => youtubePlayer.setTrailerKey(key),
 })
+
+new HeroSliderCollection(TOKEN)
